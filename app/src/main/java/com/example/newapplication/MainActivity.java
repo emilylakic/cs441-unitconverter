@@ -24,12 +24,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     private TextView updatedID;
     private Button button;
     private String dummy;
-    public int sp1meter;
-    public int sp1centimeter;
-    public int sp1inch;
-    public int sp2meter;
-    public int sp2centimeter;
-    public int sp2inch;
+    public int x;
+    public int y;
+
 
     public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l) {
         switch(adapterView.getId()) {
@@ -38,14 +35,14 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 Toast.makeText(adapterView.getContext(), text, Toast.LENGTH_SHORT);
                 adapterView.getItemAtPosition(position);
                 if (text.equals("Meter")) {
-                    sp1meter = 1;
+                    x = 0;
                     Log.d("CREATION", text);
                 }
                 if (text.equals("Centimeter")) {
-                    sp1centimeter = 1;
+
                 }
                 if (text.equals("Inch")) {
-                    sp1inch = 1;
+
                 }
                 break;
             case R.id.spinner2:
@@ -53,14 +50,13 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 Toast.makeText(adapterView.getContext(), text1, Toast.LENGTH_SHORT);
                 adapterView.getItemAtPosition(position);
                 if (text1.equals("Meter")) {
-                    sp2meter = 1;
+                    y = 1;
                     Log.d("CREATION", text1);
                 }
                 if (text1.equals("Centimeter")) {
-                    sp2centimeter = 1;
+                    y = 2;
                 }
                 if (text1.equals("Inch")) {
-                    sp2inch = 1;
                 }
                 break;
             default:
@@ -120,14 +116,11 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 //int desiredValue = Integer.parseInt(txt);
                 int number = Integer.parseInt(numberID.getText().toString());
                 //doMath(number, sp1, sp2);
-                if(sp1meter==0 && sp2centimeter==1) {
+                if(x==0 && y==2) {
                     number = number * 100;
                 }
-                if(sp1meter==0 && sp2centimeter==0) {
+               if(x==0 && y==1) {
                     number = number * 1;
-                }
-                else {
-                    number = number * 4;
                 }
                 updatedID.setText(String.valueOf(number));
             }
