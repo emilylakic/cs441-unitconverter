@@ -23,7 +23,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     public int x;
     public int y;
 
-
     public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l) {
         switch (adapterView.getId()) {
             case R.id.spinner1:
@@ -84,7 +83,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             public void onClick(View v) {
                 spinner1.setSelection(0);
                 spinner2.setSelection(0);
-                int number = Integer.parseInt(numberID.getText().toString());
+                double number = Double.parseDouble("0" + numberID.getText().toString());
+               // int number = Integer.parseInt(numberID.getText().toString());
                 double result = 0;
                 //Meters to Centimeters
                 if (x == 0 && y == 2) {
