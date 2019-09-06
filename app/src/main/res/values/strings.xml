@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Unit Converter</string>
+    <string-array name="numbers">
+        <item>Meter</item>
+        <item>Centimeter</item>
+        <item>Inch</item>
+    </string-array>
+    <color name="white">#ffffff</color>
+</resources>
