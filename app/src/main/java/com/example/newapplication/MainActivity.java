@@ -39,10 +39,10 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                     Log.d("CREATION", text);
                 }
                 if (text.equals("Centimeter")) {
-
+                    x = 2;
                 }
                 if (text.equals("Inch")) {
-
+                    x = 3;
                 }
                 break;
             case R.id.spinner2:
@@ -57,6 +57,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                     y = 2;
                 }
                 if (text1.equals("Inch")) {
+                    y = 3;
                 }
                 break;
             default:
@@ -115,14 +116,45 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 //String txt = numberID.getText().toString(); //Get txt from et when button is clicked
                 //int desiredValue = Integer.parseInt(txt);
                 int number = Integer.parseInt(numberID.getText().toString());
+                double result = 0;
                 //doMath(number, sp1, sp2);
+                //Meters to Centimeters
                 if(x==0 && y==2) {
-                    number = number * 100;
+                    result = number * 100;
                 }
+                //Meters to Meters
                if(x==0 && y==1) {
-                    number = number * 1;
+                    result = number;
                 }
-                updatedID.setText(String.valueOf(number));
+               //Centimeters to Meters
+               if(x==2 && y==1) {
+                   result = (double) number / 100;
+               }
+               //Meters to Inches
+                if(x==0 && y==3) {
+                    result = (double) number * 39.37;
+                }
+                //Inches to Meters
+                if(x==3 && y==1) {
+                    result = (double) number / 39.37;
+                }
+                //Centimeters to Inches
+                if(x==2 && y==3) {
+                    result = (double) number / 2.54;
+                }
+                //Inches to Centimeters
+                if(x==3 && y==2) {
+                    result = (double) number * 2.54;
+                }
+                //Inches to Inches
+                if(x==3 && y==3) {
+                    result = number;
+                }
+                //Centimeters to Centimeters
+                if(x==2 && y==2) {
+                    result = number;
+                }
+                updatedID.setText(String.valueOf(result));
             }
         });
 
