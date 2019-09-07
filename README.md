@@ -21,3 +21,4 @@ EditText allows the user to enter a number of their choosing, including decimals
 ## Preview
 
 ![Unit Converter](/AndroidApp.png)
+![Unit Converter](/FullScreen.png)
