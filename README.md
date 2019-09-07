@@ -2,7 +2,7 @@
 
 ## What It Does
 
-Converts a user-inputed number between the units meters, centimeters, and inches based on the user's choice. 
+Converts a user-inputed number between the units 'meters', 'centimeters', and 'inches' based on the user's choice. 
 
 ## Design Features
 
