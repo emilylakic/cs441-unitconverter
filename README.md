@@ -25,3 +25,4 @@ EditText allows the user to enter a number of their choosing, including decimals
 ## Git Status Log
 
 ![Unit Converter](/gitstatuslog.png)
+https://github.com/emilylakic/cs441-unitconverter/commits/master
