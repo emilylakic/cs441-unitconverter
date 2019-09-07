@@ -1,5 +1,9 @@
 # CS441 UNIT CONVERTER ANDROID APP
 
+## Preview
+
+![Unit Converter](/AndroidApp.png)
+
 ## What It Does
 
 Converts a user-inputed number between the units 'meters', 'centimeters', and 'inches' based on the user's choice. 
