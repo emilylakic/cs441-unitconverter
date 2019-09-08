@@ -17,7 +17,7 @@ This app contains:
 ## Preview
 
 ![Unit Converter](/FullScreenApp.jpg)
-![Dropdown](/Dropdown.png)
+![Dropdown](/Dropdown.jpg)
 
 ## Functionality
 
